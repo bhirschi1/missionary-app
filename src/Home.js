@@ -1,4 +1,5 @@
 // Home.js
+//this si a comment
 import React from "react";
 import { Link } from "react-router-dom";
 import missionaryPhoto from "./missionary_photo.jpg";
