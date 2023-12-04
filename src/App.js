@@ -15,7 +15,7 @@ function App() {
       <Link className="nav-link" to="/">Home</Link>
     </li>
     <li className="nav-item">
-      <Link className="nav-link" to="/custom-page">Custom Page</Link>
+      <Link className="nav-link" to="/custom-page">Health Survey</Link>
     </li>
     <li className="nav-item">
       <Link className="nav-link" to="/other-page">Other Page</Link>
