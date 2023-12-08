@@ -29,12 +29,6 @@ function Home() {
           textAlign: "center",
         }}
       >
-        <h2>Welcome to Missionary Health</h2>
-        <p>Ensuring the well-being of missionaries worldwide.</p>
-        <img src={missionaryPhoto} alt="Missionaries" />
-        <p style={{ textAlign: "center" }}>
-          If you are unsure where to start, please take our health survey:
-        </p>
         <div style={{ textAlign: "center" }}>
           <Link
             to="/survey"
@@ -51,6 +45,12 @@ function Home() {
             Take the Survey
           </Link>
         </div>
+        <h2>Welcome to Missionary Health</h2>
+        <p>Ensuring the well-being of missionaries worldwide.</p>
+        <img src={missionaryPhoto} alt="Missionaries" />
+        <p style={{ textAlign: "center" }}>
+          If you are unsure where to start, please take our health survey:
+        </p>
       </section>
     </div>
   );
