@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import missionaryPhoto from "./missionary_photo.jpg";
 
 const Home = () => {
+  const [showChatbot, setShowChatbot] = useState(false);
+
+  const toggleChatbot = () => {
+    setShowChatbot(!showChatbot);
+  };
+
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: "#444",
+        minHeight: "100vh",
+        paddingBottom: "20px",
+      }}
+    >
       <header
         style={{
           backgroundColor: "#333",
@@ -36,8 +48,14 @@ const Home = () => {
         >
           <h2>Welcome to Missionary Health</h2>
           <p>Ensuring the well-being of missionaries worldwide.</p>
-          <img src={missionaryPhoto} alt="Missionaries" />
-          <p style={{ textAlign: "center" }}>
+          <img
+            src={missionaryPhoto}
+            alt="Missionaries"
+            style={{ maxWidth: "100%" }}
+          />
+          <p style={{ textAlign: "center", fontSize: "18px" }}>
+            {" "}
+            {/* Increased font size */}
             If you are unsure where to start, please take our health survey:
           </p>
           <div style={{ textAlign: "center" }}>
@@ -57,24 +75,57 @@ const Home = () => {
             </Link>
           </div>
         </section>
+      </div>
 
-        {/* Add the ChatBase iframe on the bottom right corner */}
-        <div
-          style={{
-            position: "fixed",
-            bottom: "10px",
-            right: "10px",
-            zIndex: 9999,
-          }}
-        >
-          <iframe
-            src="https://www.chatbase.co/chatbot-iframe/kepTLfFX9sDgwQiFEOvH6"
-            width="300px"
-            style={{ height: "400px", minHeight: "700px" }}
-            frameBorder="0"
-            title="ChatBaseIframe"
-          ></iframe>
-        </div>
+      {/* Collapsible Chatbot */}
+      <div
+        style={{
+          position: "fixed",
+          bottom: "10px",
+          right: "10px",
+          zIndex: 9999,
+        }}
+      >
+        {showChatbot ? (
+          <div>
+            <button
+              onClick={toggleChatbot}
+              style={{
+                padding: "10px 20px",
+                color: "#fff",
+                backgroundColor: "#007BFF",
+                border: "none",
+                borderRadius: "5px",
+                cursor: "pointer",
+                transition: "background-color 0.3s ease",
+              }}
+            >
+              Hide Chatbot
+            </button>
+            <iframe
+              src="https://www.chatbase.co/chatbot-iframe/kepTLfFX9sDgwQiFEOvH6"
+              width="300px"
+              style={{ height: "400px", minHeight: "700px" }}
+              frameBorder="0"
+              title="ChatBaseIframe"
+            ></iframe>
+          </div>
+        ) : (
+          <button
+            onClick={toggleChatbot}
+            style={{
+              padding: "10px 20px",
+              color: "#fff",
+              backgroundColor: "#007BFF",
+              border: "none",
+              borderRadius: "5px",
+              cursor: "pointer",
+              transition: "background-color 0.3s ease",
+            }}
+          >
+            Show Chatbot
+          </button>
+        )}
       </div>
     </div>
   );
