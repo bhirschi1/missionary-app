@@ -1,0 +1,42 @@
+/* CustomPage.css */
+
+/* Container for the accordion */
+.accordion-container {
+  width: 1000px; /* Set the width of the accordion container */
+  margin: 10px; /* Center the accordion on the page with a margin */
+}
+
+/* Individual accordion section */
+.accordion-section {
+  margin-bottom: 10px; /* Add spacing between accordion sections */
+  background-color: #394867;
+  color: #fff;
+}
+
+/* Styling for the accordion button */
+.accordion-button {
+  background-color: #394867; /* Set the default background color */
+  color: #fff; /* Set the text color to white */
+  padding: 12px; /* Add padding to the button */
+  cursor: pointer; /* Set the cursor to a pointer on hover */
+  width: 100%; /* Make the button take the full width of its container */
+  text-align: left; /* Align the text to the left */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Add border-radius for a slightly rounded appearance */
+}
+
+/* Styling for the active accordion button */
+.accordion-button.active {
+  background-color: #394867; /* Change background color for active state */
+}
+
+/* Styling for the accordion content */
+.accordion-content {
+  background-color: #f4f6f0; /* Set background color for the content area */
+  color: #282c34;
+  padding: 12px; /* Add padding to the content area */
+  border: 1px solid #d0d3d4; /* Add a subtle border */
+  border-radius: 4px; /* Add border-radius for a slightly rounded appearance */
+  margin-top: 5px; /* Add margin at the top of the content area */
+  text-align: left; /* Align the content to the left */
+}
